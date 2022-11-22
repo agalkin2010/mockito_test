@@ -20,10 +20,10 @@ public class TestMessageSender {
 
     @Test
     public void testMessageSenderImplMockRus(){
-        GeoService geoService = Mockito.mock(GeoServiceImpl.class);
+        GeoService geoService = Mockito.mock(GeoService.class);
         Mockito.when(geoService.byIp(Mockito.<String>any())).thenReturn(new Location(null, Country.RUSSIA, null, 0));
 
-        LocalizationService localizationService = Mockito.mock(LocalizationServiceImpl.class);
+        LocalizationService localizationService = Mockito.mock(LocalizationService.class);
         Mockito.when(localizationService.locale(Country.RUSSIA)).thenReturn("Привет");
 
         Map<String, String> headers = new HashMap<String, String>();
@@ -43,10 +43,10 @@ public class TestMessageSender {
 
     @Test
     public void testMessageSenderImplMockEng(){
-        GeoService geoService = Mockito.mock(GeoServiceImpl.class);
+        GeoService geoService = Mockito.mock(GeoService.class);
         Mockito.when(geoService.byIp(Mockito.<String>any())).thenReturn(new Location(null, Country.USA, null, 0));
 
-        LocalizationService localizationService = Mockito.mock(LocalizationServiceImpl.class);
+        LocalizationService localizationService = Mockito.mock(LocalizationService.class);
         Mockito.when(localizationService.locale(Country.USA)).thenReturn("Hello");
 
         Map<String, String> headers = new HashMap<String, String>();
